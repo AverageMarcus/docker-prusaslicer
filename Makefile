@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := default
 
-IMAGE ?= docker.cluster.fun/averagemarcus/docker-prusaslicer:latest
+IMAGE ?= docker.cluster.fun/averagemarcus/prusaslicer:latest
 
 .PHONY: test # Run all tests, linting and format checks
 test: lint check-format run-tests
