@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := default
 
-IMAGE ?= docker.cluster.fun/private/docker-prusaslicer:latest
+IMAGE ?= docker.cluster.fun/averagemarcus/docker-prusaslicer:latest
 
 .PHONY: test # Run all tests, linting and format checks
 test: lint check-format run-tests
@@ -78,4 +78,4 @@ help:
 	@echo "-----------------------------------"
 	@grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1	\2/' | expand -t20
 
-default: test build
+default: test docker-build

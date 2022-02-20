@@ -4,27 +4,23 @@ Docker image containing PrusaSlicer, accessible via web UI or VNC.
 
 ## Features
 
-## Install
-
-```sh
-
-```
+* PrusaSlicer v2.4.0
+* Web based GUI (Port 5800)
+* VNC based access (Port 5900)
+* Large selection of printer profiles
+* Auto convert `.sl1` files to `.cbt` using [uv3dp](https://github.com/ezrec/uv3dp) - files in `/hom/resin` are watched and automatically converted. (Disable by seeting the environment variable `AUTO_CONVERT_SL1=false`)
 
 ## Building from source
-
-With Docker:
 
 ```sh
 make docker-build
 ```
 
-Standalone:
-
-```sh
-make build
-```
-
 ## Resources
+
+* [docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui)
+* [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer)
+* [uv3dp](https://github.com/ezrec/uv3dp)
 
 ## Contributing
 
